@@ -10,6 +10,10 @@ public partial class Mob : RigidBody2D
 		animatedSprite2D.Play();
 	}
 
+	public void Stop()
+	{
+		GetNode<AnimatedSprite2D>("AnimatedSprite2D").Stop();
+	}
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{

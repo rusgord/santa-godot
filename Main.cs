@@ -7,11 +7,21 @@ public partial class Main : Node
 	public PackedScene MobScene { get; set; }
 
 	private int _score;
+
+	private Button buttonRestart;
+
+	private Button buttonMenu;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		NewGame();
-	}
+		buttonRestart = GetNode<Button>("RestartButton");
+		buttonMenu = GetNode<Button>("MenuButton");
+		buttonRestart.Pressed += OnRestartButtonPressed;
+		buttonMenu.Pressed += OnMenuButtonPressed;
+		buttonRestart.Hide();
+		buttonMenu.Hide();
+	}	
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
@@ -21,10 +31,23 @@ public partial class Main : Node
 	{
 		GetNode<Timer>("MobTimer").Stop();
 		GetNode<Timer>("ScoreTimer").Stop();
+		foreach (var Enemy in GetTree().GetNodesInGroup("Enemy"))
+		{
+			if (Enemy is Mob)
+			{
+				Mob mob = Enemy as Mob;
+				mob.LinearVelocity = new Vector2(0, 0);
+				mob.Stop();
+			}
+		}
+
+		buttonRestart.Show();
+		//buttonMenu.Show();
 	}
 
 	public void NewGame()
 	{
+		
 		_score = 0;
 
 		var player = GetNode<Player>("Player");
@@ -75,5 +98,17 @@ public partial class Main : Node
 
 		// Spawn the mob by adding it to the Main scene.
 		AddChild(mob);
+	}
+
+	public void OnRestartButtonPressed()
+	{
+		NewGame();
+		buttonRestart.Hide();
+		buttonMenu.Hide();
+	}
+
+	public void OnMenuButtonPressed()
+	{
+		
 	}
 }
