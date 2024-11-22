@@ -1,21 +1,21 @@
 [gd_scene load_steps=7 format=3 uid="uid://51hv6d67xuck"]
 
-[ext_resource type="Texture2D" uid="uid://7yfhto4nqt75" path="res://gnome[1:3].png" id="1_uett7"]
 [ext_resource type="Script" path="res://Mob.cs" id="1_wkenk"]
-[ext_resource type="Texture2D" uid="uid://bgfn2i4ag16bf" path="res://gnome[2:3].png" id="2_lu0xg"]
-[ext_resource type="Texture2D" uid="uid://e6uqvskqgls2" path="res://gnome[3:3].png" id="3_glksn"]
+[ext_resource type="Texture2D" uid="uid://dwtygf5gx03gx" path="res://gnome_1.png" id="2_fj2pf"]
+[ext_resource type="Texture2D" uid="uid://mrfgys5umg1v" path="res://gnome_2.png" id="3_3w7ou"]
+[ext_resource type="Texture2D" uid="uid://dvbg5iji6x6bh" path="res://gnome_3.png" id="4_wqe7j"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5sney"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_uett7")
+"texture": ExtResource("2_fj2pf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_lu0xg")
+"texture": ExtResource("3_3w7ou")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_glksn")
+"texture": ExtResource("4_wqe7j")
 }],
 "loop": true,
 "name": &"walk",

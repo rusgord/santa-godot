@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgfn2i4ag16bf"
-path="res://.godot/imported/gnome[2:3].png-f63a309455b79b6055c9814963ce6f34.ctex"
+uid="uid://cj26a4dfluf6q"
+path="res://.godot/imported/santa_2.png-10a826a0488ffbbdb146ce0b5cf9cc13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gnome[2:3].png"
-dest_files=["res://.godot/imported/gnome[2:3].png-f63a309455b79b6055c9814963ce6f34.ctex"]
+source_file="res://santa_2.png"
+dest_files=["res://.godot/imported/santa_2.png-10a826a0488ffbbdb146ce0b5cf9cc13.ctex"]
 
 [params]
 

@@ -8,17 +8,15 @@ public partial class Main : Node
 
 	private int _score;
 
-	private Button buttonRestart;
+	public Button buttonRestart;
 
-	private Button buttonMenu;
+	public Button buttonMenu;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		NewGame();
-		buttonRestart = GetNode<Button>("RestartButton");
-		buttonMenu = GetNode<Button>("MenuButton");
-		buttonRestart.Pressed += OnRestartButtonPressed;
-		buttonMenu.Pressed += OnMenuButtonPressed;
+		buttonRestart = GetNode<Button>("%RestartButton");
+		buttonMenu = GetNode<Button>("%MenuButton");
 		buttonRestart.Hide();
 		buttonMenu.Hide();
 	}	
@@ -55,6 +53,7 @@ public partial class Main : Node
 		player.Start(startPosition.Position);
 
 		GetNode<Timer>("StartTimer").Start();
+		GD.Print("Timers restarted");
 		}
 	// We also specified this function name in PascalCase in the editor's connection window.
 	private void OnScoreTimerTimeout()
@@ -71,10 +70,6 @@ public partial class Main : Node
 	// We also specified this function name in PascalCase in the editor's connection window.
 	private void OnMobTimerTimeout()
 	{
-		// Note: Normally it is best to use explicit types rather than the `var`
-		// keyword. However, var is acceptable to use here because the types are
-		// obviously Mob and PathFollow2D, since they appear later on the line.
-
 		// Create a new instance of the Mob scene.
 		Mob mob = MobScene.Instantiate<Mob>();
 
@@ -102,13 +97,18 @@ public partial class Main : Node
 
 	public void OnRestartButtonPressed()
 	{
-		NewGame();
+		GD.Print("Restart button pressed");
 		buttonRestart.Hide();
 		buttonMenu.Hide();
+		NewGame();
+		
 	}
 
 	public void OnMenuButtonPressed()
 	{
-		
+		GD.Print("Menu button pressed");
+		buttonRestart.Hide();
+		buttonMenu.Hide();
+		GetTree().ChangeSceneToFile("res://menu.tscn");
 	}
 }

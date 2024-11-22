@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7yfhto4nqt75"
-path="res://.godot/imported/gnome[1:3].png-c24f38fb9bc1a86434c9bdb4d2d92b62.ctex"
+uid="uid://dwtygf5gx03gx"
+path="res://.godot/imported/gnome_1.png-9b6efb289541c97ab4cd98330e98b87e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gnome[1:3].png"
-dest_files=["res://.godot/imported/gnome[1:3].png-c24f38fb9bc1a86434c9bdb4d2d92b62.ctex"]
+source_file="res://gnome_1.png"
+dest_files=["res://.godot/imported/gnome_1.png-9b6efb289541c97ab4cd98330e98b87e.ctex"]
 
 [params]
 

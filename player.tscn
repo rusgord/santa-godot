@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://cs8rpgatjtcvo"]
 
-[ext_resource type="Texture2D" uid="uid://c3odata505mn1" path="res://santa[1:2].png" id="1_s4xuq"]
 [ext_resource type="Script" path="res://Player.cs" id="1_svwab"]
-[ext_resource type="Texture2D" uid="uid://t45pcha5vg8r" path="res://santa[2:2].png" id="2_njhay"]
+[ext_resource type="Texture2D" uid="uid://dy4btiv0bwn7p" path="res://santa_1.png" id="2_oxh3y"]
+[ext_resource type="Texture2D" uid="uid://cj26a4dfluf6q" path="res://santa_2.png" id="3_0p3mh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gefm6"]
 animations = [{
@@ -13,10 +13,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_s4xuq")
+"texture": ExtResource("2_oxh3y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_njhay")
+"texture": ExtResource("3_0p3mh")
 }],
 "loop": true,
 "name": &"walk",
