@@ -15,8 +15,12 @@ public partial class Main : Node
 	public override void _Ready()
 	{
 		NewGame();
-		buttonRestart = GetNode<Button>("%RestartButton");
-		buttonMenu = GetNode<Button>("%MenuButton");
+		buttonRestart = GetNode<Button>("RestartButton");
+		buttonMenu = GetNode<Button>("MenuButton");
+		
+		GD.Print(buttonRestart != null ? "Restart button initialized" : "Restart button is null");
+		GD.Print(buttonMenu != null ? "Menu button initialized" : "Menu button is null");
+		
 		buttonRestart.Hide();
 		buttonMenu.Hide();
 	}	
@@ -40,12 +44,12 @@ public partial class Main : Node
 		}
 
 		buttonRestart.Show();
-		//buttonMenu.Show();
+		buttonMenu.Show();
 	}
 
 	public void NewGame()
 	{
-		
+		GD.Print("New game started");
 		_score = 0;
 
 		var player = GetNode<Player>("Player");
@@ -82,13 +86,10 @@ public partial class Main : Node
 
 		// Set the mob's position to a random location.
 		mob.Position = mobSpawnLocation.Position;
-
-		// Add some randomness to the direction.
-		direction += (float)GD.RandRange(-Mathf.Pi / 4, Mathf.Pi / 4);
-		mob.Rotation = direction;
-
+		
+		
 		// Choose the velocity.
-		var velocity = new Vector2((float)150.0, 0);
+		var velocity = new Vector2((float)100.0, 0);
 		mob.LinearVelocity = velocity.Rotated(direction);
 
 		// Spawn the mob by adding it to the Main scene.
@@ -100,6 +101,13 @@ public partial class Main : Node
 		GD.Print("Restart button pressed");
 		buttonRestart.Hide();
 		buttonMenu.Hide();
+		foreach (var enemy in GetTree().GetNodesInGroup("Enemy"))
+		{
+			if (enemy is Mob mob)
+			{
+				mob.QueueFree();
+			}
+		}
 		NewGame();
 		
 	}

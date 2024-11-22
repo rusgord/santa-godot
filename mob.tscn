@@ -23,7 +23,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8dvvi"]
-size = Vector2(96, 143)
+size = Vector2(96, 139.5)
 
 [node name="Mob" type="RigidBody2D" groups=["Enemy"]]
 collision_mask = 0
@@ -36,7 +36,7 @@ sprite_frames = SubResource("SpriteFrames_5sney")
 animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, 9.5)
+position = Vector2(-3, 11.25)
 shape = SubResource("RectangleShape2D_8dvvi")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]

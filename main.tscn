@@ -28,14 +28,6 @@ one_shot = true
 [node name="StartedPosition" type="Marker2D" parent="."]
 position = Vector2(584, 320)
 
-[node name="MobPath" type="Path2D" parent="."]
-position = Vector2(16, 1)
-scale = Vector2(0.972414, 0.975309)
-curve = SubResource("Curve2D_o1hhc")
-
-[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
-position = Vector2(0, 8)
-
 [node name="RestartButton" type="Button" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
@@ -61,6 +53,14 @@ offset_right = 136.0
 offset_bottom = 116.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="MobPath" type="Path2D" parent="."]
+position = Vector2(16, 1)
+scale = Vector2(0.972414, 0.975309)
+curve = SubResource("Curve2D_o1hhc")
+
+[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
+position = Vector2(0, 8)
 
 [connection signal="Hit" from="Player" to="." method="GameOver"]
 [connection signal="timeout" from="MobTimer" to="." method="OnMobTimerTimeout"]
