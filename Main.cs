@@ -68,7 +68,6 @@ public partial class Main : Node
 	// We also specified this function name in PascalCase in the editor's connection window.
 	private void OnStartTimerTimeout()
 	{
-		GetNode<Timer>("MobTimer").Start();
 		GetNode<Timer>("ScoreTimer").Start();
 	}
 	// We also specified this function name in PascalCase in the editor's connection window.

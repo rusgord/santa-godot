@@ -26,9 +26,6 @@ stretch_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("1_wda8s")]
 
-[node name="MobTimer" type="Timer" parent="."]
-wait_time = 0.5
-
 [node name="ScoreTimer" type="Timer" parent="."]
 
 [node name="StartTimer" type="Timer" parent="."]
@@ -75,7 +72,6 @@ grow_vertical = 2
 text = "Back to menu"
 
 [connection signal="Hit" from="Player" to="." method="GameOver"]
-[connection signal="timeout" from="MobTimer" to="." method="OnMobTimerTimeout"]
 [connection signal="timeout" from="ScoreTimer" to="." method="OnScoreTimerTimeout"]
 [connection signal="timeout" from="StartTimer" to="." method="OnStartTimerTimeout"]
 [connection signal="pressed" from="RestartButton" to="." method="OnRestartButtonPressed"]
