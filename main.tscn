@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Main.cs" id="1_q5dby"]
 [ext_resource type="PackedScene" uid="uid://cs8rpgatjtcvo" path="res://player.tscn" id="1_wda8s"]
 [ext_resource type="PackedScene" uid="uid://51hv6d67xuck" path="res://mob.tscn" id="2_7rqqb"]
-[ext_resource type="Texture2D" path="snow.jpg" id="3_ay2kn"]
+[ext_resource type="Texture2D" uid="uid://dk7xm6oeub722" path="res://snow.jpg" id="3_ay2kn"]
 
 [sub_resource type="Curve2D" id="Curve2D_o1hhc"]
 _data = {
