@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bikd8lgj7lwdv"
-path="res://.godot/imported/free-icon-christmas-hat-6279437.png-addbf6e400f78c93e49028004d362356.ctex"
+uid="uid://cc7jhrfcs7ddo"
+path="res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://free-icon-christmas-hat-6279437.png"
-dest_files=["res://.godot/imported/free-icon-christmas-hat-6279437.png-addbf6e400f78c93e49028004d362356.ctex"]
+source_file="res://icon.png"
+dest_files=["res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"]
 
 [params]
 
