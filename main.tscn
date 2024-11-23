@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0t6o7poxrgnb"]
+[gd_scene load_steps=6 format=3 uid="uid://d0t6o7poxrgnb"]
 
 [ext_resource type="Script" path="res://Main.cs" id="1_q5dby"]
 [ext_resource type="PackedScene" uid="uid://cs8rpgatjtcvo" path="res://player.tscn" id="1_wda8s"]
 [ext_resource type="PackedScene" uid="uid://51hv6d67xuck" path="res://mob.tscn" id="2_7rqqb"]
+[ext_resource type="Texture2D" path="snow.jpg" id="3_ay2kn"]
 
 [sub_resource type="Curve2D" id="Curve2D_o1hhc"]
 _data = {
@@ -13,6 +14,15 @@ point_count = 5
 [node name="Main" type="Node"]
 script = ExtResource("1_q5dby")
 MobScene = ExtResource("2_7rqqb")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_ay2kn")
+stretch_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("1_wda8s")]
 
@@ -48,6 +58,7 @@ offset_right = 136.0
 offset_bottom = 28.0
 grow_horizontal = 2
 grow_vertical = 2
+text = "Restart"
 
 [node name="MenuButton" type="Button" parent="."]
 anchors_preset = 8
@@ -61,6 +72,7 @@ offset_right = 136.0
 offset_bottom = 116.0
 grow_horizontal = 2
 grow_vertical = 2
+text = "Back to menu"
 
 [connection signal="Hit" from="Player" to="." method="GameOver"]
 [connection signal="timeout" from="MobTimer" to="." method="OnMobTimerTimeout"]
